@@ -6,15 +6,13 @@ if __name__ == '__main__':
         val = line.split()
         my_tuples.append((val[0], int(val[1])))
 
-    x = 0
-    y = 0
-    aim = 0
-    for command in my_tuples:
-        if command[0] == "forward":
-            x = x + command[1]
-            y = y + aim * command[1]
-        elif command[0] == "up":
-            aim = aim - command[1]
-        elif command[0] == "down":
-            aim = aim + command[1]
+    x = y = aim = 0
+    for command, value in my_tuples:
+        if command == "forward":
+            x = x + value
+            y = y + aim * value
+        elif command == "up":
+            aim = aim - value
+        elif command == "down":
+            aim = aim + value
     print(x * y)

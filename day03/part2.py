@@ -38,11 +38,13 @@ def compare_ox(zero, one):
 
 
 if __name__ == '__main__':
-    file_lines = open("input.txt", "r").read().splitlines()
+    file_lines = open("message.txt", "r").read().splitlines()
 
     final_ox = array_looping(file_lines, compare_ox, "0", "1")
     final_co2 = array_looping(file_lines, compare_co, "1", "0")
 
     final_ox = int(str(final_ox[0]), 2)
     final_co2 = int(str(final_co2[0]), 2)
+    print(final_ox)
+    print(final_co2)
     print(final_ox * final_co2)

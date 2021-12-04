@@ -10,8 +10,8 @@ if __name__ == '__main__':
             total_sum[i] = total_sum[i] + int(line[i])
 
     for i in range(0, arr_len):
-        gamma[i] = 1 if total_sum[i] > 500 else 0
-        epsilon[i] = 0 if total_sum[i] > 500 else 1
+        gamma[i] = 1 if total_sum[i] > len(file_lines)/2 else 0
+        epsilon[i] = 0 if total_sum[i] > len(file_lines)/2 else 1
 
     gamma_str = ''.join(str(e) for e in gamma)
     epsilon_str = ''.join(str(e) for e in epsilon)
